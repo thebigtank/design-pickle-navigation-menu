@@ -127,6 +127,7 @@ header {
                             background-position-x: 100%;
                             -webkit-text-fill-color: transparent;
                             -webkit-background-clip: text;
+                            transition: .4s;
                         }
                         .content {
                             color: #7a7a7a;
@@ -137,6 +138,11 @@ header {
                         &:first-child {
                             background: #00bc871a;
                             margin-top: 0;
+                        }
+                        &:hover {
+                            .title {
+                                background-position-x: 0%;
+                            }
                         }
                     }
                 }

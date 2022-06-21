@@ -158,6 +158,8 @@ header .col .main-menu .menu-wrapper .sub-menu .sub-menu-item .title {
   background-position-x: 100%;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
 header .col .main-menu .menu-wrapper .sub-menu .sub-menu-item .content {
@@ -170,6 +172,10 @@ header .col .main-menu .menu-wrapper .sub-menu .sub-menu-item .content {
 header .col .main-menu .menu-wrapper .sub-menu .sub-menu-item:first-child {
   background: #00bc871a;
   margin-top: 0;
+}
+
+header .col .main-menu .menu-wrapper .sub-menu .sub-menu-item:hover .title {
+  background-position-x: 0%;
 }
 
 section {
