@@ -1,0 +1,121 @@
+html {
+  font-size: 16px;
+}
+
+body, a, button {
+  font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 44px;
+}
+
+header .row {
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .col .logo {
+  height: 3.4375rem;
+}
+
+header .col .main-menu .menu-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .col .main-menu .menu-wrapper .menu-item {
+  position: relative;
+  margin-left: 1.5rem;
+}
+
+header .col .main-menu .menu-wrapper .menu-item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #000;
+}
+
+header .col .main-menu .menu-wrapper .menu-item a ion-icon {
+  margin-left: 6px;
+}
+
+header .col .main-menu .menu-wrapper .menu-item .btn {
+  text-transform: capitalize;
+  border: none;
+  background-color: #FFC107;
+  font-weight: 600;
+  color: #fff;
+  padding: 7px 14px;
+  border-radius: 25px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
+}
+
+header .col .main-menu .menu-wrapper .menu-item .btn:hover {
+  background-color: #ecb201;
+}
+
+header .col .main-menu .menu-wrapper .menu-item:last-child a {
+  color: #00bc87;
+}
+
+header .col .main-menu .menu-wrapper .menu-item:last-child a:hover {
+  color: #000;
+}
+
+header .col .main-menu .menu-wrapper .menu-item::before {
+  content: "";
+  width: calc(100% + 0.5rem);
+  height: 10px;
+  position: absolute;
+  bottom: -2px;
+  left: -3px;
+  z-index: -1;
+  background-color: #00bc8780;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform .2s ease-in-out;
+  transition: -webkit-transform .2s ease-in-out;
+  transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+}
+
+header .col .main-menu .menu-wrapper .menu-item:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+header .col .main-menu .menu-wrapper .get-started:before {
+  display: none;
+}
+
+section {
+  background-color: #ebebeb;
+  width: 100%;
+  height: 700px;
+}
+/*# sourceMappingURL=style.css.map */
