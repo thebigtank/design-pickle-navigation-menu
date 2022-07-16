@@ -17,72 +17,76 @@
     <header>
         <div class="wrapper">
             <div class="row">
-                <div class="col">
-                    <img src="assets/logo.png" alt="" class="logo">
+                <div class="col logo">
+                    <img src="assets/logo.png" alt="">
                 </div>
-                <div class="col">
-                    <nav class="main-menu">
-                        <ul class="menu-wrapper">
-                            <li class="menu-item">
-                                <a href="#">
-                                    <span>solutions</span>
-                                    <ion-icon name="chevron-down"></ion-icon>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li class="sub-menu-item">
-                                        <h4 class="title">book a demo</h4>
-                                        <p class="content">Get a guided walkthrough of our platform</p>
-                                    </li>
-                                    <li class="sub-menu-item">
-                                        <h4 class="title">graphic design</h4>
-                                        <p class="content">Get a guided walkthrough of our platform</p>
-                                    </li>
-                                    <li class="sub-menu-item">
-                                        <h4 class="title">custom illustrations</h4>
-                                        <p class="content">Get a guided walkthrough of our platform</p>
-                                    </li>
-                                    <li class="sub-menu-item">
-                                        <h4 class="title">presentation design</h4>
-                                        <p class="content">Get a guided walkthrough of our platform</p>
-                                    </li>
-                                    <li class="sub-menu-item">
-                                        <h4 class="title">motion graphics</h4>
-                                        <p class="content">Get a guided walkthrough of our platform</p>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#">
-                                    <span>our platform</span>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#">
-                                    <span>our work</span>
-                                    <ion-icon name="chevron-down"></ion-icon>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#">
-                                    <span>resources</span>
-                                    <ion-icon name="chevron-down"></ion-icon>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#">
-                                    <span>plans</span>
-                                </a>
-                            </li>
-                            <li class="menu-item get-started">
-                                <button class="btn">get started</button>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#">
-                                    <span>login</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
+                <div class="col menu">
+                    <ul class="menu-wrapper">
+                        <li class="menu-item">
+                            <a href="#">
+                                <span>solutions</span>
+                                <ion-icon name="chevron-down"></ion-icon>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <h4 class="title">book a demo</h4>
+                                    <p class="content">Get a guided walkthrough of our platform</p>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <h4 class="title">graphic design</h4>
+                                    <p class="content">Scale your creative content with flat-rate, on-demand graphic design.</p>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <h4 class="title">custom illustrations</h4>
+                                    <p class="content">Scale your creative content with flat-rate, on-demand graphic design.</p>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <h4 class="title">presentation design</h4>
+                                    <p class="content">Scale your creative content with flat-rate, on-demand graphic design.</p>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <h4 class="title">motion graphics</h4>
+                                    <p class="content">Scale your creative content with flat-rate, on-demand graphic design.</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                <span>our platform</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                <span>our work</span>
+                                <ion-icon name="chevron-down"></ion-icon>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                <span>resources</span>
+                                <ion-icon name="chevron-down"></ion-icon>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                <span>plans</span>
+                            </a>
+                        </li>
+                        <li class="menu-item book">
+                            <button class="btn">book a demo</button>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                <span>login</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col mobile">
+                    <button class="hamburger">
+                        <ion-icon class="open" name="menu-sharp"></ion-icon>
+                        <ion-icon class="close" name="close-sharp"></ion-icon>
+                    </button>
                 </div>
             </div>
         </div>
@@ -94,5 +98,14 @@
     
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        let hamburger = document.querySelector('.hamburger');
+        let header = document.querySelector("header");
+
+        hamburger.addEventListener('click', function () {
+            header.classList.toggle("active");
+        });
+    </script>
 </body>
 </html>

@@ -9,7 +9,7 @@ body, a, button {
 .wrapper {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 44px;
+  padding: 0 20px;
 }
 
 header .row {
@@ -25,11 +25,17 @@ header .row {
           align-items: center;
 }
 
-header .col .logo {
+header .col.logo img {
   height: 3.4375rem;
 }
 
-header .col .main-menu .menu-wrapper {
+@media screen and (max-width: 980px) {
+  header .col.menu {
+    display: none;
+  }
+}
+
+header .col.menu .menu-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,12 +44,18 @@ header .col .main-menu .menu-wrapper {
           align-items: center;
 }
 
-header .col .main-menu .menu-wrapper .menu-item {
+header .col.menu .menu-wrapper .menu-item {
   position: relative;
   margin-left: 1.5rem;
 }
 
-header .col .main-menu .menu-wrapper .menu-item a {
+@media screen and (max-width: 1130px) {
+  header .col.menu .menu-wrapper .menu-item {
+    margin-left: 1rem;
+  }
+}
+
+header .col.menu .menu-wrapper .menu-item a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,11 +66,17 @@ header .col .main-menu .menu-wrapper .menu-item a {
   color: #000;
 }
 
-header .col .main-menu .menu-wrapper .menu-item a ion-icon {
+header .col.menu .menu-wrapper .menu-item a ion-icon {
   margin-left: 6px;
 }
 
-header .col .main-menu .menu-wrapper .menu-item .btn {
+@media screen and (max-width: 1130px) {
+  header .col.menu .menu-wrapper .menu-item a {
+    font-size: 0.85rem;
+  }
+}
+
+header .col.menu .menu-wrapper .menu-item .btn {
   text-transform: capitalize;
   border: none;
   background-color: #FFC107;
@@ -71,19 +89,19 @@ header .col .main-menu .menu-wrapper .menu-item .btn {
           box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
 }
 
-header .col .main-menu .menu-wrapper .menu-item .btn:hover {
+header .col.menu .menu-wrapper .menu-item .btn:hover {
   background-color: #ecb201;
 }
 
-header .col .main-menu .menu-wrapper .menu-item:last-child a {
+header .col.menu .menu-wrapper .menu-item:last-child a {
   color: #00bc87;
 }
 
-header .col .main-menu .menu-wrapper .menu-item:last-child a:hover {
+header .col.menu .menu-wrapper .menu-item:last-child a:hover {
   color: #000;
 }
 
-header .col .main-menu .menu-wrapper .menu-item::before {
+header .col.menu .menu-wrapper .menu-item::before {
   content: "";
   width: calc(100% + 0.5rem);
   height: 10px;
@@ -102,22 +120,22 @@ header .col .main-menu .menu-wrapper .menu-item::before {
   transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
 }
 
-header .col .main-menu .menu-wrapper .menu-item:hover::before {
+header .col.menu .menu-wrapper .menu-item:hover::before {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
   -webkit-transform-origin: left;
           transform-origin: left;
 }
 
-header .col .main-menu .menu-wrapper .menu-item:hover .sub-menu {
+header .col.menu .menu-wrapper .menu-item:hover .sub-menu {
   display: block;
 }
 
-header .col .main-menu .menu-wrapper .get-started:before {
+header .col.menu .menu-wrapper .book:before {
   display: none;
 }
 
-header .col .main-menu .menu-wrapper .sub-menu {
+header .col.menu .menu-wrapper .sub-menu {
   display: none;
   position: absolute;
   top: 36px;
@@ -125,12 +143,12 @@ header .col .main-menu .menu-wrapper .sub-menu {
   -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
   padding: 18px 12px;
-  width: 260px;
+  width: 280px;
   border-radius: 6px;
   cursor: pointer;
 }
 
-header .col .main-menu .menu-wrapper .sub-menu::before {
+header .col.menu .menu-wrapper .sub-menu::before {
   content: "";
   display: block;
   position: absolute;
@@ -140,20 +158,20 @@ header .col .main-menu .menu-wrapper .sub-menu::before {
   width: calc(100% + 1.5rem);
 }
 
-header .col .main-menu .menu-wrapper .sub-menu .sub-menu-item {
+header .col.menu .menu-wrapper .sub-menu .sub-menu-item {
   position: relative;
   padding: 14px 16px;
   border-radius: 6px;
   margin-top: .75rem;
 }
 
-header .col .main-menu .menu-wrapper .sub-menu .sub-menu-item .title {
+header .col.menu .menu-wrapper .sub-menu .sub-menu-item .title {
   text-transform: capitalize;
-  font-size: .95rem;
+  font-size: 0.875rem;
   font-weight: 600;
   margin-bottom: 7px;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #282b30), color-stop(0, #febe3c)) !important;
-  background-image: linear-gradient(90deg, #282b30 50%, #febe3c 0) !important;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #00bc87), color-stop(0, #282b30)) !important;
+  background-image: linear-gradient(90deg, #00bc87 50%, #282b30 0) !important;
   background-size: 200%;
   background-position-x: 100%;
   -webkit-text-fill-color: transparent;
@@ -162,20 +180,79 @@ header .col .main-menu .menu-wrapper .sub-menu .sub-menu-item .title {
   transition: .4s;
 }
 
-header .col .main-menu .menu-wrapper .sub-menu .sub-menu-item .content {
-  color: #7a7a7a;
-  font-size: 0.875rem;
+header .col.menu .menu-wrapper .sub-menu .sub-menu-item .content {
+  color: #282b30;
+  font-size: 0.8125rem;
   font-weight: 500;
-  line-height: 22px;
+  line-height: 20px;
+  opacity: .55;
 }
 
-header .col .main-menu .menu-wrapper .sub-menu .sub-menu-item:first-child {
+header .col.menu .menu-wrapper .sub-menu .sub-menu-item:nth-child(1) {
   background: #00bc871a;
   margin-top: 0;
 }
 
-header .col .main-menu .menu-wrapper .sub-menu .sub-menu-item:hover .title {
+header .col.menu .menu-wrapper .sub-menu .sub-menu-item:nth-child(2) .title {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #282b30), color-stop(0, #00bc87)) !important;
+  background-image: linear-gradient(90deg, #282b30 50%, #00bc87 0) !important;
+}
+
+header .col.menu .menu-wrapper .sub-menu .sub-menu-item:nth-child(3) .title {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #282b30), color-stop(0, #febe3c)) !important;
+  background-image: linear-gradient(90deg, #282b30 50%, #febe3c 0) !important;
+}
+
+header .col.menu .menu-wrapper .sub-menu .sub-menu-item:nth-child(4) .title {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #282b30), color-stop(0, #64cffe)) !important;
+  background-image: linear-gradient(90deg, #282b30 50%, #64cffe 0) !important;
+}
+
+header .col.menu .menu-wrapper .sub-menu .sub-menu-item:nth-child(5) .title {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #282b30), color-stop(0, #576ee7)) !important;
+  background-image: linear-gradient(90deg, #282b30 50%, #576ee7 0) !important;
+}
+
+header .col.menu .menu-wrapper .sub-menu .sub-menu-item:hover .title {
   background-position-x: 0%;
+}
+
+header .col.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 980px) {
+  header .col.mobile {
+    display: block;
+  }
+}
+
+header .col.mobile button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+header .col.mobile button ion-icon {
+  font-size: 2rem;
+}
+
+header .col.mobile button .close {
+  display: none;
+}
+
+header.active .mobile button .open {
+  display: none;
+}
+
+header.active .mobile button .close {
+  display: block;
 }
 
 section {
