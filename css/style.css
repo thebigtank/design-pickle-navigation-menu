@@ -32,6 +32,12 @@ header .col.logo img {
 @media screen and (max-width: 980px) {
   header .col.menu {
     display: none;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    padding: 20px 0;
   }
 }
 
@@ -44,15 +50,23 @@ header .col.menu .menu-wrapper {
           align-items: center;
 }
 
+@media screen and (max-width: 980px) {
+  header .col.menu .menu-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 25px;
+    padding: 0 20px;
+  }
+}
+
 header .col.menu .menu-wrapper .menu-item {
   position: relative;
   margin-left: 1.5rem;
-}
-
-@media screen and (max-width: 1130px) {
-  header .col.menu .menu-wrapper .menu-item {
-    margin-left: 1rem;
-  }
 }
 
 header .col.menu .menu-wrapper .menu-item a {
@@ -73,6 +87,12 @@ header .col.menu .menu-wrapper .menu-item a ion-icon {
 @media screen and (max-width: 1130px) {
   header .col.menu .menu-wrapper .menu-item a {
     font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  header .col.menu .menu-wrapper .menu-item a {
+    font-size: 0.95rem;
   }
 }
 
@@ -129,6 +149,18 @@ header .col.menu .menu-wrapper .menu-item:hover::before {
 
 header .col.menu .menu-wrapper .menu-item:hover .sub-menu {
   display: block;
+}
+
+@media screen and (max-width: 1130px) {
+  header .col.menu .menu-wrapper .menu-item {
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  header .col.menu .menu-wrapper .menu-item:hover .sub-menu {
+    display: none;
+  }
 }
 
 header .col.menu .menu-wrapper .book:before {
@@ -245,6 +277,10 @@ header .col.mobile button ion-icon {
 
 header .col.mobile button .close {
   display: none;
+}
+
+header.active .menu {
+  display: block;
 }
 
 header.active .mobile button .open {

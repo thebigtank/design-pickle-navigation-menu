@@ -102,10 +102,46 @@
     <script>
         let hamburger = document.querySelector('.hamburger');
         let header = document.querySelector("header");
+        let menu_items = document.querySelectorAll(".menu-item");
 
         hamburger.addEventListener('click', function () {
             header.classList.toggle("active");
         });
+
+        menu_items.forEach(function (parent) {
+            // menu_items.classList.remove('active');
+            parent.addEventListener('click', function () {
+                parent.classList.toggle('active');
+            });
+        });
+
+        // menu_item.addEventListener('click', function () {
+        //     this.classList.toggle("active");
+        // });
     </script>
 </body>
 </html>
+
+
+
+<span>your best decision</span>
+
+
+
+
+column-gap: 40px;
+
+
+
+
+
+span {
+    display: block;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-2);
+    position: relative;
+    bottom: 20px;
+    text-align: center;
+}

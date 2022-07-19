@@ -30,17 +30,25 @@ header {
         &.menu {
             @media screen and (max-width: 980px) {
                 display: none;
+                position: absolute;
+                top: 90px;
+                left: 0;
+                background-color: #fff;
+                width: 100%;
+                padding: 20px 0;
             }
             .menu-wrapper {
                 display: flex;
                 align-items: center;
+                @media screen and (max-width: 980px) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 25px;
+                    padding: 0 20px;
+                }
                 .menu-item {
                     position: relative;
                     margin-left: 1.5rem;
-                    // responsive
-                    @media screen and (max-width: 1130px) {
-                        margin-left: 1rem;
-                    }
 
                     a {
                         display: flex;
@@ -55,6 +63,10 @@ header {
 
                         @media screen and (max-width: 1130px) {
                             font-size: 0.85rem;
+                        }
+
+                        @media screen and (max-width: 980px) {
+                            font-size: 0.95rem;
                         }
                     }
                     .btn {
@@ -99,6 +111,18 @@ header {
                         }
                         .sub-menu {
                             display: block;
+                        }
+                    }
+                    
+                    // responsive
+                    @media screen and (max-width: 1130px) {
+                        margin-left: 1rem;
+                    }
+                    @media screen and (max-width: 980px) {
+                        &:hover {
+                            .sub-menu {
+                                display: none;
+                            }
                         }
                     }
                 }
@@ -209,6 +233,9 @@ header {
     }
 
     &.active {
+        .menu {
+            display: block;
+        }
         .mobile {
             button {
                 .open {
